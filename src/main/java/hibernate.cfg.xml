@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- Hibernate mandatory properties -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+
+		<!-- Assume test is the database name -->
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/test</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">system</property>
+		<property name="hibernate.hbm2ddl.auto">create-drop</property>
+		<property name="show_sql">true</property>
+		<!-- <property name="hibernate.current_session_context_class">thread</property> -->
+
+		<!-- one-to-one(UNI_joincolumn) -->
+		<!-- <mapping class="com.scp.Mapping.OneToOne.Employee" /> 
+		<mapping class="com.scp.Mapping.OneToOne.Address"/> -->
+
+		<!-- one-to-one(UNI_joinTable) -->
+		<!-- <mapping class="com.scp.Mapping.OneToOne.Employee_UJT" /> 
+		<mapping class="com.scp.Mapping.OneToOne.Address_UJT"/> -->
+
+		<!-- one-to-one(UNI_primaryKey) -->
+		<!-- <mapping class="com.scp.Mapping.OneToOne.Address_PRI" /> 
+		<mapping class="com.scp.Mapping.OneToOne.Employee_PRI"/> -->
+
+		<!-- one-to-one(BI_joinColumn) -->
+		<!-- <mapping class="com.scp.Mapping.OneToOne.Employee_BJC" /> 
+		<mapping class="com.scp.Mapping.OneToOne.Address_BJC" /> -->
+
+		<!-- one-to-one(BI_joinTable) -->
+		<!-- <mapping class="com.scp.Mapping.OneToOne.Employee_JT" />
+		 <mapping class="com.scp.Mapping.OneToOne.Address_JT" /> -->
+
+		<!-- one-to-one(BI_PrimaryKey) -->
+		<!-- <mapping class="com.scp.Mapping.OneToOne.Employee_BPK" /> 
+		<mapping class="com.scp.Mapping.OneToOne.Address_BPK" /> -->
+
+		<!-- one-to-many(UNI_joinColumn) -->
+		<!-- <mapping class="com.scp.Mapping.OneToMany.Patient_UJC" />
+		<mapping class="com.scp.Mapping.OneToMany.Hospital_UJC" /> -->
+
+		<!-- one-to-many(UNI_joinTable) -->
+		<!-- <mapping class="com.scp.Mapping.OneToMany.Patient_UJT" />
+		<mapping class="com.scp.Mapping.OneToMany.Hospital_UJT" /> -->
+
+		<!-- one-to-many(UNI_primaryKey) -->
+		<!-- <mapping class="com.scp.Mapping.OneToMany.Patient_UPK" />
+		<mapping class="com.scp.Mapping.OneToMany.Hospital_UPK" /> -->
+
+		<!-- one-to-many(BI_joinColumn) -->
+		<!-- <mapping class="com.scp.Mapping.OneToMany.Patient_BJC" />
+		<mapping class="com.scp.Mapping.OneToMany.Hospital_BJC" /> -->
+		
+		<!-- one-to-many(BI_joinTable) -->
+		<!-- <mapping class="com.scp.Mapping.OneToMany.Patient_BJT" />
+		<mapping class="com.scp.Mapping.OneToMany.Hospital_BJT" /> -->
+		
+		<!-- one-to-many(BI_primaryKey) -->
+		<!-- <mapping class="com.scp.Mapping.OneToMany.Patient_BPK" />
+		<mapping class="com.scp.Mapping.OneToMany.Hospital_BPK" /> -->
+		
+		<!-- many-to-many(UNI_joinColumn) -->
+		<!-- <mapping class="com.scp.Mapping.ManyToMany.Student_manyTOmany_UJC" />
+		<mapping class="com.scp.Mapping.ManyToMany.Subject_manyTOmany_UJC" /> -->
+
+		<!-- many-to-many(UNI_joinTable) -->
+		<!-- <mapping class="com.scp.Mapping.ManyToMany.Student_manyTOmany_UJT" />
+		<mapping class="com.scp.Mapping.ManyToMany.Subject_manyTOmany_UJT" /> -->
+
+		<!-- many-to-many(UNI_primaryKey) -->
+		<!-- <mapping class="com.scp.Mapping.ManyToMany.Patient_UPK" />
+		<mapping class="com.scp.Mapping.ManyToMany.Hospital_UPK" /> -->
+
+		<!-- many-to-many(BI_joinColumn) -->
+		<!-- <mapping class="com.scp.Mapping.ManyToMany.Student_manyTOmany_BJC" />
+		<mapping class="com.scp.Mapping.ManyToMany.Subject_manyTOmany_BJC" /> -->
+		
+		<!-- many-to-many(BI_joinTable) -->
+		<!-- <mapping class="com.scp.Mapping.ManyToMany.Student_manyTOmany_BJT" />
+		<mapping class="com.scp.Mapping.ManyToMany.Subject_manyTOmany_BJT" /> -->
+		
+		 <!-- many-to-many(BI_primaryKey) -->
+		<mapping class="com.scp.Mapping.ManyToMany.Student_manyTOmany_BPK" />
+		<mapping class="com.scp.Mapping.ManyToMany.Subject_manyTOmany_BPK" />
+		
+	</session-factory>
+</hibernate-configuration>
